@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DSE243F_FINAL_PROKECT
 {
-    public partial class ItemCatalouge_Manager : Form
+    public partial class Manager_Dashboard : Form
     {
-        public ItemCatalouge_Manager()
+        public Manager_Dashboard()
         {
             InitializeComponent();
         }

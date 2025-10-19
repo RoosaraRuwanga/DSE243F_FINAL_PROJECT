@@ -49,11 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ItemCatalouge_Manager.cs">
+    <Compile Include="Accountant_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ItemCatalouge_Manager.Designer.cs">
-      <DependentUpon>ItemCatalouge_Manager.cs</DependentUpon>
+    <Compile Include="Accountant_Dashboard.Designer.cs">
+      <DependentUpon>Accountant_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_ItemCatalouge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_ItemCatalouge.Designer.cs">
+      <DependentUpon>Manager_ItemCatalouge.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -61,13 +67,31 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Dashboard.Designer.cs">
+      <DependentUpon>Manager_Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ItemCatalouge_Manager.resx">
-      <DependentUpon>ItemCatalouge_Manager.cs</DependentUpon>
+    <Compile Include="_FORMTEMPLATE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_FORMTEMPLATE.Designer.cs">
+      <DependentUpon>_FORMTEMPLATE.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accountant_Dashboard.resx">
+      <DependentUpon>Accountant_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_ItemCatalouge.resx">
+      <DependentUpon>Manager_ItemCatalouge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Dashboard.resx">
+      <DependentUpon>Manager_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +102,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="_FORMTEMPLATE.resx">
+      <DependentUpon>_FORMTEMPLATE.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
