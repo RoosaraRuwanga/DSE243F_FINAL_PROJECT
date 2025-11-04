@@ -40,10 +40,15 @@
             // 
             // dgCatalouge
             // 
+            this.dgCatalouge.AllowUserToAddRows = false;
+            this.dgCatalouge.AllowUserToDeleteRows = false;
             this.dgCatalouge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCatalouge.Location = new System.Drawing.Point(254, 12);
+            this.dgCatalouge.MultiSelect = false;
             this.dgCatalouge.Name = "dgCatalouge";
+            this.dgCatalouge.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgCatalouge.RowTemplate.Height = 24;
+            this.dgCatalouge.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgCatalouge.Size = new System.Drawing.Size(678, 373);
             this.dgCatalouge.TabIndex = 0;
             // 
@@ -53,9 +58,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 25);
+            this.label3.Size = new System.Drawing.Size(235, 32);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Item Catalouge:";
+            this.label3.Text = "Product Catalouge:";
             // 
             // btnAdd
             // 
@@ -67,7 +72,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(211, 45);
             this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Add Item";
+            this.btnAdd.Text = "Add Product";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -81,7 +86,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(211, 45);
             this.btnUpdate.TabIndex = 8;
-            this.btnUpdate.Text = "Update Item";
+            this.btnUpdate.Text = "Update Product";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -95,7 +100,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(211, 45);
             this.btnDelete.TabIndex = 9;
-            this.btnDelete.Text = "Delete Item";
+            this.btnDelete.Text = "Delete Product";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -111,6 +116,7 @@
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Go Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnStock
             // 
@@ -125,9 +131,9 @@
             this.btnStock.Text = "Adjust Stock";
             this.btnStock.UseVisualStyleBackColor = false;
             // 
-            // ItemCatalouge_Manager
+            // Manager_ItemCatalouge
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(944, 397);
@@ -141,8 +147,9 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "ItemCatalouge_Manager";
+            this.Name = "Manager_ItemCatalouge";
             this.Text = "ItemCatalouge_Manager";
+            this.Load += new System.EventHandler(this.Manager_ItemCatalouge_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgCatalouge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

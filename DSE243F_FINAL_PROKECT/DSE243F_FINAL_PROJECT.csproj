@@ -32,12 +32,19 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +61,13 @@
     </Compile>
     <Compile Include="Accountant_Dashboard.Designer.cs">
       <DependentUpon>Accountant_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseSingleton.cs" />
+    <Compile Include="Manager_Dialog_AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Dialog_AddProduct.Designer.cs">
+      <DependentUpon>Manager_Dialog_AddProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager_ItemCatalouge.cs">
       <SubType>Form</SubType>
@@ -73,8 +87,20 @@
     <Compile Include="Manager_Dashboard.Designer.cs">
       <DependentUpon>Manager_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="MonthlyReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportView_Monthly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView_Monthly.Designer.cs">
+      <DependentUpon>ReportView_Monthly.cs</DependentUpon>
+    </Compile>
     <Compile Include="_FORMTEMPLATE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="Accountant_Dashboard.resx">
       <DependentUpon>Accountant_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Dialog_AddProduct.resx">
+      <DependentUpon>Manager_Dialog_AddProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager_ItemCatalouge.resx">
       <DependentUpon>Manager_ItemCatalouge.cs</DependentUpon>
@@ -93,6 +122,10 @@
     <EmbeddedResource Include="Manager_Dashboard.resx">
       <DependentUpon>Manager_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MonthlyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -101,7 +134,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportView_Monthly.resx">
+      <DependentUpon>ReportView_Monthly.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="_FORMTEMPLATE.resx">
       <DependentUpon>_FORMTEMPLATE.cs</DependentUpon>
     </EmbeddedResource>
